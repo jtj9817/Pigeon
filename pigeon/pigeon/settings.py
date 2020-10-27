@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     # Knox 3rd party package for token generation
     'knox',
     # Custom 'Accounts/API/' app for managing user accounts
-    'account',
+    'account.apps.AccountConfig',
     # Pigeon Applications for Messaging and Posts functionalities
     'pigeon_messaging.apps.PigeonMessagingConfig',
     'pigeon_posts.apps.PigeonPostsConfig',
