@@ -1,1 +1,1 @@
-web: gunicorn pigeon.wsgi --preload --log-file - 
+web: gunicorn pigeon:account --preload --log-file - 
