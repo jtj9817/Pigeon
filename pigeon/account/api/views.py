@@ -6,9 +6,8 @@ from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.decorators import (api_view, authentication_classes,
                                        permission_classes)
-from rest_framework.generics import (CreateAPIView, DestroyAPIView,
-                                     ListCreateAPIView, RetrieveAPIView,
-                                     UpdateAPIView)
+from rest_framework.generics import (CreateAPIView,
+                                     ListCreateAPIView, RetrieveUpdateAPIView, RetrieveDestroyAPIView)
 from rest_framework.permissions import (IsAdminUser, IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
@@ -89,7 +88,7 @@ class AccountListView(ListCreateAPIView):
 # GET view for an Account object instance
 
 
-class AccountDetailView(RetrieveAPIView):
+class AccountDetailView(RetrieveUpdateAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -104,15 +103,10 @@ class AccountCreateView(CreateAPIView):
 # UPDATE (PUT) view for an account object instance
 
 
-class AccountUpdateView(UpdateAPIView):
-    queryset = Account.objects.all()
-    serializer_class = AccountSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
 # DELETE view for an account object instance
 
 
-class AccountDeleteView(DestroyAPIView):
+class AccountDeleteView(RetrieveDestroyAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
     permission_classes = [permissions.IsAuthenticated]
