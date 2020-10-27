@@ -30,8 +30,11 @@ A test suite is included on 'tests.py'. It can be ran by invoking the "python ma
 
 To register an account:
 
-Go to http://127.0.0.1:8000/api/account/register and copy+paste the following datta to ensure consistent formatting:
-`{ "username": "testuser", "email": "testuser@gmail.com", "password": "password321", "password_verify": "password321" }`
+Go to http://127.0.0.1:8000/api/account/register and copy+paste the following data format to ensure that the registration request will be processed:
+`{ "username": "[insert username here]", "email": "[insert email here]", "password": "[insert password here]", "password_verify": "[insert password here again]" }`
+
+As an example:
+`{ "username": "pidgeonuserone", "email": "pidgeonuserone@gmail.com", "password": "coolpidgeons123", "password_verify": "coolpidgeons123" }`
 
 ### Pigeon - Messaging
 
@@ -79,3 +82,15 @@ Tests directory:
 - account/tests.py
 - pigeon_messaging/tests.py
 - pigeon_posts/tests.py
+
+## Installation
+
+To install:
+
+1. Clone the repository
+2. Once the repository has been completely cloned, create a Python virtual environment in the root directory of the repository.
+   To create a Python virtualenv(venv), have python3 installed in your system and run the following command in the commandline while in the root of the Pigeon repository:
+   `python3 -m venv [virtual environment name]` without the square brackets - i.e.: `python3 -m venv pigeonvenv`
+3. Now run `[virtual environment name]\Scripts\activate` without the square brackets. For example: `pigeonvenv\Scripts\activate`
+4. Once the virtual environment has been loaded, run the command `pip install requirements.txt` to install all the required software packages for the web application
+5. Once all packages has been successfully installed, go to 'pigeon' subdirectory and run `python manage.py runserver`
