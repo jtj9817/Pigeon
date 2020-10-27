@@ -27,15 +27,11 @@ For account registration & login
 A test suite is included on 'tests.py'. It can be ran by invoking the "python manage.py test" command while on the 'pigeon' directory.
 
 **NOTE**:
+
 To register an account:
-Go to http://127.0.0.1:8000/api/account/register
-and copy+paste the following data:
-{
-"username": "testuser",
-"email": "testuser@gmail.com",
-"password": "password321",
-"password_verify": "password321"
-}
+
+Go to http://127.0.0.1:8000/api/account/register and copy+paste the following datta to ensure consistent formatting:
+`{ "username": "testuser", "email": "testuser@gmail.com", "password": "password321", "password_verify": "password321" }`
 
 ### Pigeon - Messaging
 
