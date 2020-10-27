@@ -85,7 +85,7 @@ class UpdateAccountTest(TestCase):
             "password_verify": "password321"
         }
         self.response = self.client.put(
-            self.url + str(target_user_account.pk) + '/update/', self.new_data)
+            self.url + str(target_user_account.pk), self.new_data)
         self.assertEqual(self.response.status_code, status.HTTP_200_OK)
 
 
