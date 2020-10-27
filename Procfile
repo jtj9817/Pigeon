@@ -1,1 +1,1 @@
-web: gunicorn pigeon:application --preload --log-file -
+web: gunicorn pigeon:app --preload --log-file -
