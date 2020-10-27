@@ -49,7 +49,7 @@ def registration_view(request):
                 token = Token.objects.get(user=account)
             except Token.DoesNotExist:
                 token = Token.objects.create(user=account)
-            data['token'] = token
+            data['token'] = token.key
         else:
             data = serializer.errors
         return Response(data)
