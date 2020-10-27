@@ -93,4 +93,5 @@ To install:
    `python3 -m venv [virtual environment name]` without the square brackets - i.e.: `python3 -m venv pigeonvenv`
 3. Now run `[virtual environment name]\Scripts\activate` without the square brackets. For example: `pigeonvenv\Scripts\activate`
 4. Once the virtual environment has been loaded, run the command `pip install requirements.txt` to install all the required software packages for the web application
-5. Once all packages has been successfully installed, go to 'pigeon' subdirectory and run `python manage.py runserver`
+5. Create a file called ".env" (yes, without any file name) and set your own configuration for the environment variables.
+6. Once all packages has been successfully installed, go to 'pigeon' subdirectory and run `python manage.py runserver`
