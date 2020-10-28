@@ -2,7 +2,9 @@
 
 ### Pigeon - Pigeon
 
-This is the root of the project. Apps such as pigeon_base, pigeon_messaging, pigeon_posts, and account are added to this root.
+This is the root of the project. Apps such as pigeon_messaging, pigeon_posts, and account are added to this root.
+
+This application is meant to run locally and as such, the links for the API endpoints are local URL addresses.
 
 ### Pigeon - Account
 
@@ -92,6 +94,6 @@ To install:
    To create a Python virtualenv(venv), have python3 installed in your system and run the following command in the commandline while in the root of the Pigeon repository:
    `python3 -m venv [virtual environment name]` without the square brackets - i.e.: `python3 -m venv pigeonvenv`
 3. Now run `[virtual environment name]\Scripts\activate` without the square brackets. For example: `pigeonvenv\Scripts\activate`
-4. Once the virtual environment has been loaded, run the command `pip install requirements.txt` to install all the required software packages for the web application
+4. Once the virtual environment has been loaded, run the command `pip install -r requirements.txt` to install all the required software packages for the web application
 5. Create a file called ".env" (yes, without any file name) and set your own configuration for the environment variables.
 6. Once all packages has been successfully installed, go to 'pigeon' subdirectory and run `python manage.py runserver`
